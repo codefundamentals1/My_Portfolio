@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import TiltedCard from "../TiltedCard/TiltedCard";
 
 export const HeroSection = () => {
   const [displayText, setDisplayText] = useState("");
@@ -28,6 +29,7 @@ export const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative px-4 pt-20"
     >
+      
       {/* Background effects (unchanged) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
@@ -79,7 +81,7 @@ export const HeroSection = () => {
             <Button
               variant="outline"
               className="border-primary/30 text-primary hover:bg-primary/10 font-mono"
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open("#", "_blank")}
             >
               View Resume
             </Button>
@@ -114,20 +116,32 @@ export const HeroSection = () => {
 
         {/* --- RIGHT SIDE IMAGE --- */}
         <div className="flex-1 flex justify-center md:justify-center">
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-500 animate-floating">
-            <img
-              src="https://i.ibb.co/4Zgs2xBH/pic2.jpg"
-              alt="Anish Raja"
-              className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+         
+          <TiltedCard
+            imageSrc="https://i.ibb.co/4Zgs2xBH/pic2.jpg"
+            altText="Anish Raja"
+            captionText="Anish Raja -Dev"
+            containerHeight="600px"
+            containerWidth="500px"
+            imageHeight="500px"
+            imageWidth="400px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            
+          />
+          
         </div>
       </div>
 
       {/* Scroll Down */}
       <button
         onClick={() =>
-          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+          document
+            .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth" })
         }
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary animate-bounce"
       >
