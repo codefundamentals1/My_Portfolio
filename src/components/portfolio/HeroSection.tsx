@@ -116,9 +116,9 @@ export const HeroSection = () => {
 
         {/* --- RIGHT SIDE IMAGE --- */}
         <div className="flex-1 flex justify-center md:justify-center">
-         
+         {/* <a href="https://ibb.co/8gH1gYdH"><img src="https://i.ibb.co/3mngmRMn/IMG-20250930-WA0007.jpg" alt="IMG-20250930-WA0007" border="0"></a> */}
           <TiltedCard
-            imageSrc="https://i.ibb.co/4Zgs2xBH/pic2.jpg"
+            imageSrc="https://i.ibb.co/3mngmRMn/IMG-20250930-WA0007.jpg"
             altText="Anish Raja"
             captionText="Anish Raja -Dev"
             containerHeight="600px"
